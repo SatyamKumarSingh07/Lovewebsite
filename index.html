@@ -29,6 +29,12 @@
         #noButton {
             background-color: #FF6347; /* Tomato */
         }
+
+        #signature {
+            margin-top: 50px;
+            font-size: 18px;
+            color: #FF0000; /* Red */
+        }
     </style>
 </head>
 <body>
@@ -37,7 +43,8 @@
 
     <button id="yesButton" onclick="showLoveMessage()">Yes</button>
     <button id="noButton" onmouseover="floatNoButton()" onclick="preventNoClick()">No</button>
-    
+
+    <div id="signature">Satyam Kumar Singh</div>
 
     <script>
         function showLoveMessage() {
@@ -55,7 +62,6 @@
             var newY = Math.random() * (window.innerHeight - noButton.clientHeight);
             noButton.style.left = newX + 'px';
             noButton.style.top = newY + 'px';
-            <div id="signature">Satyam Kumar Singh</div>
         }
     </script>
 
