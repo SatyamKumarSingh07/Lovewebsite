@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Go Out With Me?</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #FF69B4; /* Hot Pink */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #yesButton {
+            background-color: #90EE90; /* Light Green */
+        }
+
+        #noButton {
+            background-color: #FF6347; /* Tomato */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will You Go Out With Me?</h1>
+
+    <button id="yesButton" onclick="showLoveMessage()">Yes</button>
+    <button id="noButton" onmouseover="floatNoButton()" onclick="preventNoClick()">No</button>
+
+    <script>
+        function showLoveMessage() {
+            window.location.href = "lovePage.html";
+        }
+
+        function preventNoClick() {
+            alert("Sorry, you can only click on 'Yes'.");
+        }
+
+        function floatNoButton() {
+            var noButton = document.getElementById('noButton');
+            noButton.style.position = 'absolute';
+            var newX = Math.random() * (window.innerWidth - noButton.clientWidth);
+            var newY = Math.random() * (window.innerHeight - noButton.clientHeight);
+            noButton.style.left = newX + 'px';
+            noButton.style.top = newY + 'px';
+        }
+    </script>
+
+</body>
+</html>
